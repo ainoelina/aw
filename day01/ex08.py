@@ -1,5 +1,9 @@
 import requests
 import smtplib
+import datetime
+
+#!/usr/bin/python
+
 
 def send_mail():
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -13,7 +17,14 @@ def send_mail():
 def get_request():
     r = requests.get('http://51.124.168.159/health.html')
     status = r.status_code
+    now = datetime.datetime.now()
+    text = now.strftime("%H:%M:%S")
     if status != 200:
         send_mail()
+    else:
+        with open("log.txt", "a") as file:
+            file.write(f"{text} status:\t")
+            file.write(str(status))
+            file.write('\n')
 
 get_request()
