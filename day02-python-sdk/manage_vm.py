@@ -71,7 +71,7 @@ def create_nic(name, subnet, subnet_id, ip_id):
 
 def provision_vm(name, nic_id):
     un = 'aino'
-    pw = 'Tosisalainen1!'
+    pw = 'Testausta1!'
     print(f"Provisioning virtual machine {name}; this operation might take a few minutes.")
     vm_creation = compute_client.virtual_machines.begin_create_or_update(
         RG_NAME, name,
