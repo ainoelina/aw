@@ -35,10 +35,10 @@ def delete_rg(rg_name):
     delete_rg.wait()
 
 def main():
-    create_rg("aino-test-rg")
+#    create_rg("aino-test-rg")
 #    list_rg()
-    get_rg("aino-test-rg")
-    update_rg("tag2", "value2")
+#    get_rg("aino-test-rg")
+#    update_rg("tag2", "value2")
     delete_rg("aino-test-rg")
 
 main()
