@@ -68,8 +68,7 @@ def update_certificates(con, cursor, name, person_id):
 	values = (name, person_id)
 	cursor.execute(SQL, values)
 	con.commit()
-	print(f"")
-
+	
 def delete_person(con, cursor, id):
 	SQL = "DELETE FROM person WHERE id = %s"
 	cursor.execute(SQL, (id,))
