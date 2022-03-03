@@ -1,3 +1,4 @@
 .vscode/
 pdfs/
 misc/
+day04-python-postgres/src/data/database.ini
